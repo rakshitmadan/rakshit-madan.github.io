@@ -12,31 +12,6 @@
         .mascot-img:active { transform: scale(1.08) rotate(-3deg); }
         .pet-counter { font-size: 1.2rem; margin-top: 0.5rem; }
         .milestone { color: #ff4081; font-weight: bold; }
-        .contact-form { max-width: 400px; margin: 2rem auto; padding: 2rem; background: #fff8; border-radius: 12px; box-shadow: 0 2px 12px #0001; }
-        .contact-form input, .contact-form textarea { width: 100%; margin-bottom: 1rem; padding: 0.7rem; border-radius: 6px; border: 1px solid #ccc; }
-        .contact-form button { background: #ff4081; color: #fff; border: none; padding: 0.7rem 2rem; border-radius: 6px; cursor: pointer; }
-        .resume-btn { display: inline-block; margin: 1rem 0; padding: 0.7rem 2rem; background: #1976d2; color: #fff; border-radius: 6px; text-decoration: none; font-weight: bold; }
-        
-        .credential-btn {
-            display: inline-block;
-            margin-left: 15px;
-            padding: 5px 12px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-align: center;
-            text-decoration: none;
-            color: #3498db;
-            background-color: transparent;
-            border: 2px solid #3498db;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-        }
-
-        .credential-btn:hover {
-            background-color: #3498db;
-            color: #fff;
-        }
-
         @media (max-width: 600px) { .mascot-img { width: 120px; } }
     </style>
 </head>
@@ -44,16 +19,22 @@
     <nav class="navbar glass">
         <div class="container">
             <span class="logo">Rakshit Madan</span>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button id="theme-toggle" class="theme-btn">☀️</button>
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
         </div>
     </nav>
     <header id="home" class="hero glass">
@@ -298,17 +279,19 @@
     <footer class="glass">
         &copy; 2025 Rakshit Madan. All Rights Reserved.
     </footer>
+
     <script src="assets/js/main.js"></script>
     <script>
-        // Oscar mascot widget logic
-        // NOTE: This script requires a backend API to function.
-        // It is left here as a template.
+        // Oscar mascot widget logic (optional)
         const oscarMascot = document.getElementById('oscarMascot');
         if (oscarMascot) {
             oscarMascot.onclick = function() {
                 const counter = document.getElementById('petCounter');
-                let currentCount = parseInt(counter.textContent.match(/\d+/) || [0]);
-                counter.textContent = `Oscar has been petted ${currentCount + 1} times!`;
+                // A simple counter that doesn't require a backend
+                let currentCount = parseInt(counter.dataset.count || '0');
+                currentCount++;
+                counter.dataset.count = currentCount;
+                counter.textContent = `Oscar has been petted ${currentCount} times!`;
             };
         }
     </script>
