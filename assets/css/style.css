@@ -1,53 +1,237 @@
-/* General Body Styles */
+/* --- Google Fonts Import --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* --- General & Body Styles --- */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
+    background: #f0f2f5; /* Light gray background */
     color: #333;
 }
 
-/* Header Styles */
-header {
-    background: #333;
-    color: #fff;
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+/* --- Navbar --- */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
     padding: 1rem 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin-left: 20px;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: #34495e;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    color: #3498db;
+}
+
+/* --- Glassmorphism Effect --- */
+.glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Hero Section --- */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    padding-top: 80px; /* Offset for fixed navbar */
 }
 
-header h1 {
-    margin: 0;
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
 }
 
-/* Section Styling */
-section {
-    padding: 20px;
-    margin: 0 20px;
+.hero h2 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: #34495e;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.hero-stats div {
+    font-size: 1.1rem;
+}
+
+.hero-stats span {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #3498db;
+}
+
+.resume-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #3498db;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.resume-btn:hover {
+    background: #2980b9;
+}
+
+/* --- Main Content Sections --- */
+main section {
+    padding: 60px 40px;
+    margin-bottom: 30px;
+}
+
+main h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #2c3e50;
+}
+
+/* --- Experience & Education & Projects --- */
+.experience-item, .education-item, .project-item {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
     border-bottom: 1px solid #ddd;
 }
 
-#projects .project {
-    margin-bottom: 20px;
-    padding: 10px;
-    background: #fff;
-    border: 1px solid #ccc;
+.experience-item:last-child, .education-item:last-child, .project-item:last-child {
+    border-bottom: none;
 }
 
-/* Footer Styles */
-footer {
+h3 {
+    color: #3498db;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+p {
+    margin-top: 0;
+}
+
+/* --- Skills Section --- */
+#skills ul {
+    list-style: none;
+    padding: 0;
     text-align: center;
-    padding: 20px;
-    background: #333;
-    color: #fff;
 }
 
-/* Links */
-a {
-    color: #333;
+#skills li {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+/* --- Contact Section --- */
+.contact-form {
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+.contact-info {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.contact-info a {
+    color: #3498db;
+    font-weight: 600;
     text-decoration: none;
 }
 
-a:hover {
+.contact-info a:hover {
     text-decoration: underline;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+    }
+
+    .navbar .nav-links {
+        margin-top: 10px;
+        padding: 0;
+    }
+    
+    .navbar .nav-links li {
+        margin: 0 10px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    main section {
+        padding: 40px 20px;
+    }
 }
