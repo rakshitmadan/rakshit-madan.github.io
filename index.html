@@ -3,49 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
+    <title>Rakshit Madan | Portfolio</title>
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="icon" href="images/oscar.png">
+    <style>
+        .mascot-widget { text-align: center; margin: 2rem 0; }
+        .mascot-img { width: 180px; cursor: pointer; transition: transform 0.2s; }
+        .mascot-img:active { transform: scale(1.08) rotate(-3deg); }
+        .pet-counter { font-size: 1.2rem; margin-top: 0.5rem; }
+        .milestone { color: #ff4081; font-weight: bold; }
+        .contact-form { max-width: 400px; margin: 2rem auto; padding: 2rem; background: #fff8; border-radius: 12px; box-shadow: 0 2px 12px #0001; }
+        .contact-form input, .contact-form textarea { width: 100%; margin-bottom: 1rem; padding: 0.7rem; border-radius: 6px; border: 1px solid #ccc; }
+        .contact-form button { background: #ff4081; color: #fff; border: none; padding: 0.7rem 2rem; border-radius: 6px; cursor: pointer; }
+        .resume-btn { display: inline-block; margin: 1rem 0; padding: 0.7rem 2rem; background: #1976d2; color: #fff; border-radius: 6px; text-decoration: none; font-weight: bold; }
+        @media (max-width: 600px) { .mascot-img { width: 120px; } }
+    </style>
 </head>
 <body>
-
-    <header>
-        <h1>Rakshit Madan</h1>
-        <p>Business Analyst | Data Scientist | Data Analyst</p>
+    <nav class="navbar glass">
+        <div class="container">
+            [cite_start]<span class="logo">Rakshit Madan</span> [cite: 1]
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header id="home" class="hero glass">
+        <div class="hero-content">
+            [cite_start]<h1>Hi, I'm Rakshit Madan</h1> [cite: 1]
+            <h2>A Business Analytics professional</h2>
+            <p>Leveraging data analytics and machine learning to drive business strategy and optimize processes.</p>
+            <div class="hero-stats">
+                <div><span>5+</span><br>Years of Experience</div>
+                <div><span>8+</span><br>Projects Completed</div>
+                <div><span>20+</span><br>Technologies</div>
+            </div>
+            <a class="resume-btn" href="Rakshit_Madan_Resume.pdf" download>Download Resume</a>
+        </div>
+        <div class="mascot-widget">
+            <img src="images/oscar.png" alt="Oscar the White Spitz" class="mascot-img" id="oscarMascot">
+            <div class="pet-counter" id="petCounter">Oscar has been petted ... times!</div>
+            <div id="milestoneMsg"></div>
+        </div>
     </header>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            Welcome to my portfolio! A Business Analytics professional with a passion for building data-driven solutions and leveraging machine learning to uncover insights.
-        </p>
-    </section>
-
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div class="project">
-            <h3>Project One</h3>
-            <p>A short description of the first project, what technologies were used, and what it does.</p>
-        </div>
-        <div class="project">
-            <h3>Project Two</h3>
-            <p>A short description of the second project. This showcases a different skill or technology.</p>
-        </div>
-        <div class="project">
-            <h3>Project Three</h3>
-            <p>A summary of a third project, highlighting the key achievements and my role.</p>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>You can reach me at <a href="mailto:youremail@example.com">rakshitmadan.work@gmail.com</a></p>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Rakshit Madan. All rights reserved.</p>
+    <main class="container">
+        <section id="about" class="glass">
+            <h2>About Me</h2>
+            [cite_start]<p>As a Master's candidate in Business Analytics at Drexel University with a 3.95 GPA, I am passionate about transforming complex data into actionable business outcomes[cite: 4]. [cite_start]My professional experience includes leading teams to develop real-time fraud detection dashboards that enabled potential savings of $8–$10M annually, and engineering supply-chain optimization solutions that increased profitability by 15%[cite: 23, 25]. [cite_start]I enjoy the full spectrum of a data project—from building ETL pipelines and performing root-cause analysis with SQL to developing predictive models with Python and creating impactful dashboards in Power BI and Tableau[cite: 9, 10, 20].</p>
+        </section>
+        <section id="experience" class="glass">
+            <h2>Experience</h2>
+            <div class="experience-item">
+                <h3>Tech Impact – Business Analyst Intern</h3>
+                <p><strong>Philadelphia, PA | [cite_start]Jun 2024 - Mar 2025</strong></p> [cite: 15, 16]
+                <ul>
+                    [cite_start]<li>Analyzed census and administrative data with Python and SQL for a $1.6M workforce initiative, boosting community reach by 15%[cite: 17].</li>
+                    [cite_start]<li>Automated Qualtrics survey pipelines with Python, cutting turnaround by 40% and lifting client engagement by 25%[cite: 18].</li>
+                    [cite_start]<li>Built and automated monthly Power BI dashboards, reducing report preparation time by 50%[cite: 19].</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>Ganit Inc. – Senior Data Analyst</h3>
+                <p><strong>India | [cite_start]Sep 2019 - Aug 2022</strong></p> [cite: 21, 22]
+                <ul>
+                    [cite_start]<li>Led a team to develop a real-time fraud detection dashboard using SQL and Tableau, reducing authentication time from 80 hours to 1 hour per 100 claims[cite: 23].</li>
+                    [cite_start]<li>Generated a prioritized product list for a Fortune 500 client using Logistic Regression, boosting sales by 3.1%[cite: 24].</li>
+                    [cite_start]<li>Engineered a supply-chain optimization solution using Python, increasing supply-chain profitability by 15%[cite: 25].</li>
+                </ul>
+            </div>
+        </section>
+        <section id="education" class="glass">
+            <h2>Education</h2>
+            <div class="education-item">
+                [cite_start]<h3>M.S in Business Analytics, Drexel University</h3> [cite: 4]
+                [cite_start]<p><strong>Philadelphia, PA – GPA: 3.95 (Expected Mar 2025)</strong></p> [cite: 4]
+                [cite_start]<p><em>Relevant Coursework:</em> Statistics, Machine Learning, Geospatial Analytics, Linear Programming, FinTech, Corporate Finance[cite: 5].</p>
+            </div>
+            <div class="education-item">
+                [cite_start]<h3>Bachelor of Commerce (Honours), University of Delhi</h3> [cite: 6]
+                <p><strong>Delhi, India | [cite_start]Jul 2013 – Jun 2016</strong></p> [cite: 6]
+            </div>
+        </section>
+        <section id="skills" class="glass">
+            <h2>Skills</h2>
+            <ul>
+                [cite_start]<li><strong>Languages & Scripting:</strong> Python, R, SQL (Postgre SQL, SQLite, MySQL, Athena)[cite: 8].</li>
+                [cite_start]<li><strong>Database & Data Management:</strong> SQL Databases, ETL Pipelines, dbt (familiar), Data Cleaning & Transformation[cite: 9].</li>
+                [cite_start]<li><strong>Visualization & Reporting:</strong> Power BI, Tableau, Advanced Excel (VBA, macros, pivot tables), R Markdown[cite: 10].</li>
+                [cite_start]<li><strong>Cloud & Tools:</strong> AWS (Sagemaker, Athena, S3), BigQuery (familiar), Snowflake (familiar)[cite: 11].</li>
+                [cite_start]<li><strong>Techniques:</strong> KPI Tracking, Demand Forecasting, A/B Testing, Trend Analysis, Hypothesis Testing[cite: 13].</li>
+            </ul>
+        </section>
+        <section id="projects" class="glass">
+            <h2>Projects</h2>
+            <div class="project-item">
+                <h3>Wildfire Risk Analysis | [cite_start]Python, ArcGIS, K-Means Clustering</h3> [cite: 36]
+                [cite_start]<p>Implemented a K-Means clustering model to classify 16,256 properties based on wildfire risk, improving insurance pricing accuracy[cite: 37]. [cite_start]Integrated ArcGIS data with Precisely’s dataset using the Ball Tree Algorithm, enhancing underwriting precision by 30%[cite: 38].</p>
+            </div>
+            <div class="project-item">
+                <h3>Credit Risk Scoring and Loan Prediction | [cite_start]R, SQL, Lasso/Ridge Regression</h3> [cite: 39]
+                [cite_start]<p>Built a Lasso and Ridge Regression model on 396K+ Lending Club records to forecast loan amounts with 87% accuracy[cite: 40]. [cite_start]Identified borrower anomalies using VIF and residual diagnostics to enhance credit risk and fraud detection[cite: 41].</p>
+            </div>
+        </section>
+        <section id="contact" class="glass">
+            <h2>Contact</h2>
+            <form class="contact-form" action="https://formspree.io/f/your-formspree-id" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+            <div class="contact-info">
+                <p>I'm currently seeking new opportunities and my inbox is always open. Whether you have a question or just want to connect, I'll get back to you!</p>
+                [cite_start]<p>Email: <a href="mailto:madan.rakshit3@gmail.com">madan.rakshit3@gmail.com</a></p> [cite: 2]
+                [cite_start]<p>LinkedIn: <a href="https://linkedin.com/in/rakshit-madan/">linkedin.com/in/rakshit-madan/</a></p> [cite: 2]
+            </div>
+        </section>
+    </main>
+    <footer class="glass">
+        &copy; 2025 Rakshit Madan. All Rights Reserved.
     </footer>
-
     <script src="assets/js/main.js"></script>
-
+    <script>
+        // Oscar mascot widget logic
+        // NOTE: This script requires a backend API to function.
+        // It is left here as a template.
+        const oscarMascot = document.getElementById('oscarMascot');
+        if (oscarMascot) {
+            oscarMascot.onclick = function() {
+                const counter = document.getElementById('petCounter');
+                let currentCount = parseInt(counter.textContent.match(/\d+/) || [0]);
+                counter.textContent = `Oscar has been petted ${currentCount + 1} times!`;
+            };
+        }
+    </script>
 </body>
 </html>
