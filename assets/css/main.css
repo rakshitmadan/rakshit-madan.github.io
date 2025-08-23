@@ -3,36 +3,61 @@
 
 /* --- CSS Variables for Theming --- */
 :root {
-    --bg-color: #f0f2f5;
+    --bg-color: #f4f7f9;
     --text-color: #333;
-    --heading-color: #1976d2;
+    --heading-color: #0d47a1; /* A deeper blue for headings */
+    --primary-color: #1976d2; /* Main interactive color */
     --accent-color: #ff4081;
-    --glass-bg: rgba(255, 255, 255, 0.7);
-    --glass-border: rgba(255, 255, 255, 0.3);
-    --shadow-color: rgba(31, 38, 135, 0.1);
+    --glass-bg: rgba(255, 255, 255, 0.8);
+    --glass-border: rgba(255, 255, 255, 0.4);
+    --shadow-color: rgba(0, 0, 0, 0.08);
     --navbar-bg: rgba(255, 255, 255, 0.85);
 }
 
 body.dark-theme {
-    --bg-color: #121212;
+    --bg-color: #1a1a1a;
     --text-color: #e0e0e0;
-    --heading-color: #58a6ff;
+    --heading-color: #64b5f6; /* Lighter blue for dark mode */
+    --primary-color: #42a5f5;
     --accent-color: #f78166;
-    --glass-bg: rgba(30, 30, 30, 0.7);
+    --glass-bg: rgba(40, 40, 40, 0.7);
     --glass-border: rgba(255, 255, 255, 0.1);
     --shadow-color: rgba(0, 0, 0, 0.2);
-    --navbar-bg: rgba(20, 20, 20, 0.85);
+    --navbar-bg: rgba(25, 25, 25, 0.85);
 }
 
 /* --- General & Body Styles --- */
 body, html {
-    margin: 0;
-    padding: 0;
+    margin: 0; padding: 0;
     font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
+    line-height: 1.7;
     background: var(--bg-color);
     color: var(--text-color);
     transition: background 0.3s ease, color 0.3s ease;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--glass-border);
+    margin: 2.5rem 0;
+}
+
+/* --- Glassmorphism Effect --- */
+.glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border-radius: 18px;
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 8px 32px 0 var(--shadow-color);
+    margin-bottom: 3rem;
+    padding: 3rem;
 }
 
 /* --- Navbar --- */
@@ -42,74 +67,121 @@ body, html {
     backdrop-filter: blur(10px);
     box-shadow: 0 2px 12px var(--shadow-color);
 }
-.navbar .container { display: flex; justify-content: space-between; align-items: center; }
-.navbar .logo { font-weight: 700; font-size: 1.5rem; color: var(--heading-color); }
-.nav-menu { display: flex; align-items: center; gap: 1rem; }
-.nav-links { list-style: none; display: flex; gap: 1.5rem; margin: 0; padding: 0; }
-.nav-links a { text-decoration: none; color: var(--text-color); font-weight: 500; transition: color 0.2s; }
-.nav-links a:hover { color: var(--accent-color); }
+/* ... (existing navbar styles) ... */
 
-/* --- Theme Toggle Button --- */
-.theme-btn {
-    background: none; border: none; font-size: 1.5rem; cursor: pointer;
-    line-height: 1; padding: 0.25rem;
+/* --- Hero Section --- */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 85vh;
+    text-align: center;
 }
 
-/* --- Hamburger Menu (Mobile) --- */
-.nav-toggle { display: none; }
+.hero-content {
+    max-width: 800px;
+}
 
-/* ... Other styles for hero, sections, buttons, etc. ... */
-/* Your existing CSS from the previous step should go here, but with colors replaced by variables */
+.hero h1 { font-size: 4rem; margin-bottom: 0.5rem; color: var(--heading-color); }
+.hero h2 { font-size: 1.8rem; font-weight: 400; margin-bottom: 1rem; }
+.hero p { font-size: 1.1rem; margin-bottom: 2rem; }
+
+.hero-stats {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin: 2.5rem 0;
+}
+.hero-stats div {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    font-weight: 300;
+}
+.hero-stats span {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* --- Main Content Sections --- */
+main section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--heading-color);
+}
+
+/* --- Experience, Education, Projects --- */
+.experience-item, .education-item, .project-item {
+    margin-bottom: 2.5rem;
+}
+.experience-item:last-child, .education-item:last-child, .project-item:last-child {
+    margin-bottom: 0;
+}
+
+.experience-item h3, .education-item h3, .project-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+    color: var(--text-color);
+    font-weight: 600;
+}
+.experience-item p, .education-item p {
+    margin-top: 0;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+/* --- Certifications Section --- */
+.cert-list ul {
+    list-style: none;
+    padding: 0;
+}
+.cert-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--glass-border);
+}
+.cert-list li:last-child {
+    border-bottom: none;
+}
+
+/* --- Skills Section --- */
+#skills ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+#skills li {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 1rem;
+    box-shadow: 0 2px 5px var(--shadow-color);
+}
 
 /* --- Responsive Design --- */
-@media (max-width: 768px) {
-    .nav-menu {
-        position: fixed;
-        top: 0; right: -100%; /* Start off-screen */
-        height: 100vh;
-        width: 60%;
-        flex-direction: column;
-        background: var(--navbar-bg);
-        padding: 4rem 2rem;
-        transition: right 0.3s ease-in-out;
-        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
-    }
-    .nav-menu.active {
-        right: 0; /* Slide in */
-    }
-    .nav-links {
-        flex-direction: column;
-        text-align: center;
-    }
-    .nav-toggle {
-        display: block;
-        cursor: pointer;
-        background: transparent;
-        border: none;
-        padding: 0;
-        z-index: 1001; /* Above the nav menu */
-    }
-    .hamburger {
-        display: block;
-        position: relative;
-        width: 25px;
-        height: 2px;
-        background: var(--text-color);
-        transition: background 0.2s ease-in-out;
-    }
-    .hamburger::before, .hamburger::after {
-        content: '';
-        position: absolute;
-        width: 25px;
-        height: 2px;
-        background: var(--text-color);
-        transition: transform 0.2s ease-in-out;
-    }
-    .hamburger::before { top: -8px; }
-    .hamburger::after { bottom: -8px; }
+/* ... (existing responsive styles) ... */
 
-    /* Hamburger animation */
-    .nav-menu.active + .nav-toggle .hamburger { background: transparent; }
-    .nav-menu.active + .nav-toggle .hamburger::before { transform: rotate(45deg) translate(5px, 6px); }
-    .nav-menu.active + .nav-toggle .hamburger::after { transform: rotate(-45deg) translate(5px, -6px); }
+@media (max-width: 600px) {
+    .glass {
+        padding: 1.5rem;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .cert-list li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
 }
