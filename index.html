@@ -1,299 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rakshit Madan | Portfolio</title>
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="icon" href="images/oscar.png">
-    <style>
-        .mascot-widget { text-align: center; margin: 2rem 0; }
-        .mascot-img { width: 180px; cursor: pointer; transition: transform 0.2s; }
-        .mascot-img:active { transform: scale(1.08) rotate(-3deg); }
-        .pet-counter { font-size: 1.2rem; margin-top: 0.5rem; }
-        .milestone { color: #ff4081; font-weight: bold; }
-        @media (max-width: 600px) { .mascot-img { width: 120px; } }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rakshit Madan | Data Analytics Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar glass">
-        <div class="container">
-            <span class="logo">Rakshit Madan</span>
-            <div class="nav-menu">
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#certifications">Certifications</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <button id="theme-toggle" class="theme-btn">☀️</button>
+    <button class="mode-btn" onclick="toggleMode()">🌓</button>
+    <header>
+        <div class="header-content">
+            <img src="images/profile.png" alt="Rakshit's Photo" class="profile-pic">
+            <div class="header-text">
+                <h1>Rakshit Madan</h1>
+                <p>Data Analytics Professional | Business Analyst</p>
             </div>
-            <button class="nav-toggle" aria-label="toggle navigation">
-                <span class="hamburger"></span>
-            </button>
-        </div>
-    </nav>
-    <header id="home" class="hero glass">
-        <div class="hero-content">
-            <h1>Hi, I'm Rakshit Madan</h1>
-            <h2>A Business Analytics professional</h2>
-            <p>Leveraging data analytics and machine learning to drive business strategy and optimize processes.</p>
-            <div class="hero-stats">
-                <div><span>5+</span><br>Years of Experience</div>
-                <div><span>8+</span><br>Projects Completed</div>
-                <div><span>20+</span><br>Technologies</div>
-            </div>
-            <a class="resume-btn" href="Rakshit_Madan_Resume.pdf" download>Download Resume</a>
-        </div>
-        <div class="mascot-widget">
-            <img src="images/oscar.png" alt="Oscar the White Spitz" class="mascot-img" id="oscarMascot">
-            <div class="pet-counter" id="petCounter">Oscar has been petted ... times!</div>
-            <div id="milestoneMsg"></div>
         </div>
     </header>
-    <main class="container">
-        <section id="about" class="glass">
-            <h2>About Me</h2>
-            <p>As a Master's candidate in Business Analytics at Drexel University with a 3.95 GPA, I am passionate about transforming complex data into actionable business outcomes. My professional experience includes leading teams to develop real-time fraud detection dashboards that enabled potential savings of $8–$10M annually, and engineering supply-chain optimization solutions that increased profitability by 15%. I enjoy the full spectrum of a data project—from building ETL pipelines and performing root-cause analysis with SQL to developing predictive models with Python and creating impactful dashboards in Power BI and Tableau.</p>
+
+    <nav>
+        <a href="#summary">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container">
+    <section id="summary" data-aos="fade-up">
+        <h2>👨‍💻 About Me</h2>
+        <div class="info-card">
+            <p>As a Data Analyst with a Master's in Business Analytics from Drexel University (GPA: 3.95) and over 4+ years of experience, I specialize in transforming complex data into actionable business outcomes. My professional experience includes leading teams to develop real-time fraud detection dashboards that enabled potential savings of $8–$10M annually, and engineering supply-chain optimization solutions that increased profitability by 15%.</p>
+            <p>My expertise lies in the full spectrum of a data project—from building ETL pipelines and performing root-cause analysis with SQL to developing predictive models with Python and creating impactful dashboards in Power BI and Tableau. I thrive on translating business needs into technical solutions and communicating data-driven stories to stakeholders.</p>
+            <p>I am driven by a curiosity for what's next in data. Whether it's diving into advanced machine learning techniques or exploring new cloud data platforms, I am always seeking to expand my toolkit to solve increasingly complex problems and drive measurable growth.</p>
+        </div>
+    </section>
+
+        <section id="skills" class="skills-section" data-aos="fade-up">
+            <h2>🛠️ Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Languages & Scripting</h3>
+                    <div class="icons">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python" />
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" alt="R" title="R"/>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqldeveloper/sqldeveloper-original.svg" alt="SQL" title="SQL"/>
+                    </div>
+                    <p>Python, R, SQL (PostgreSQL, MySQL, Athena)</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Visualization & Reporting</h3>
+                     <div class="icons">
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="Power BI" title="Power BI"/>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tableau/tableau-original.svg" alt="Tableau" title="Tableau"/>
+                    </div>
+                    <p>Power BI, Tableau, Advanced Excel (VBA, macros), R Markdown</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Cloud & Tools</h3>
+                    <div class="icons">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS" title="AWS"/>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="Google Cloud" title="BigQuery"/>
+                    </div>
+                    <p>AWS (Sagemaker, Athena, S3), BigQuery, Snowflake</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Database & Data Management</h3>
+                    <p>SQL Databases, ETL Pipelines, Data Cleaning & Transformation</p>
+                </div>
+                <div class="skill-card">
+                    <h3>ML & Analytical Techniques</h3>
+                    <p>XGBoost, Regression, A/B Testing, Forecasting, Hypothesis Testing</p>
+                </div>
+            </div>
         </section>
 
-        <section id="experience" class="glass">
-            <h2>Experience</h2>
-            <div class="experience-item">
-                <h3>Tech Impact – Business Analyst Intern</h3>
-                <p><strong>Philadelphia PA | Jun 2024 - Mar 2025</strong></p>
+        <section id="experience" class="experience-section" data-aos="fade-up">
+            <h2>💼 Experience</h2>
+            <div class="project-card">
+                <h3>Tech Impact</h3>
+                <p><strong>Role:</strong> Business Analyst Intern</p>
+                <p>📍 Philadelphia, PA • 🗓️ Jun 2024 – Mar 2025</p>
+                <p>Contributed to a $1.6M workforce initiative by analyzing census data to map demographics and connect participants to training, while also automating data pipelines and dashboards to significantly improve operational efficiency.</p>
                 <ul>
-                    <li>Analyzed census and administrative data with Python and SQL for a $1.6 M workforce initiative, mapped demographics, connected 500+ participants to training providers, and boosted reach by 15%.</li>
-                    <li>Automated Qualtrics survey pipelines with Python rule-based logic to assess nonprofit technical maturity and generate service recommendations, cutting turnaround by 40% and lifting client engagement by 25%.</li>
-                    <li>Built and automated monthly Power BI dashboards using advanced Excel macros to track operational KPIs, reducing report preparation time by 50 percent and saving over 20 hours per month for leadership teams.</li>
-                    <li>Performed root-cause analysis of support tickets with SQL and partnered with IT and Ops to streamline workflows, reducing resolution time by 20%.</li>
+                    <li>Boosted community reach by 15% through Python and SQL analysis.</li>
+                    <li>Cut survey data processing turnaround by 40% with Python automation.</li>
+                    <li>Reduced report preparation time by 50% by building automated Power BI dashboards.</li>
                 </ul>
             </div>
-            <div class="experience-item">
-                <h3>Ganit Inc. – Senior Data Analyst</h3>
-                <p><strong>India | Sep 2019 - Aug 2022</strong></p>
+            <div class="project-card">
+                <h3>Ganit Inc.</h3>
+                <p><strong>Role:</strong> Senior Data Analyst</p>
+                <p>📍 India • 🗓️ Sep 2019 – Aug 2022</p>
+                <p>Led a team of four and delivered high-impact data science solutions for Fortune 500 clients, including real-time fraud detection systems, sales-boosting product recommendation engines, and supply-chain optimizations.</p>
                 <ul>
-                    <li>Led a team of four in developing a real-time fraud detection dashboard using SQL and Tableau, reducing authentication time from 80 hours to 1 hour per 100 claims and enabling potential savings of $8–$10M annually.</li>
-                    <li>Generated a prioritized product list for a Fortune 500 FMCG client using Logistic Regression and Cosine Similarity, boosting sales by 3.1% and halving computation time through a Python pipeline on AWS SageMaker.</li>
-                    <li>Engineered a supply-chain optimization solution using Python to model safety stock levels and reorder points for 60% of distributors, reducing stock imbalances and increasing supply-chain profitability by 15%.</li>
-                    <li>Built a Marketing Mix model using Linear Regression on Nielsen media and pricing data for a global FMCG client, quantifying the revenue impact of pricing and promotional activity and driving a 5% YoY margin lift.</li>
+                    <li>Reduced claims authentication time from 80 hours to 1 hour, enabling potential savings of $8–$10M annually with a new fraud detection dashboard.</li>
+                    <li>Boosted client sales by 3.1% with a logistic regression model for product prioritization.</li>
+                    <li>Increased supply-chain profitability by 15% with a Python-based optimization solution.</li>
                 </ul>
             </div>
-            <div class="experience-item">
-                <h3>Progresso Research & Analytics – Data Analyst</h3>
-                <p><strong>India | Oct 2018 - Aug 2019</strong></p>
+             <div class="project-card">
+                <h3>Progresso Research & Analytics</h3>
+                <p><strong>Role:</strong> Data Analyst</p>
+                <p>📍 India • 🗓️ Oct 2018 – Aug 2019</p>
                 <ul>
-                    <li>Conducted data analysis for 50+ market research initiatives, using Excel and survey analytics to uncover consumer trends, inform targeted marketing strategies, and boost brand positioning by 15%.</li>
-                    <li>Constructed and implemented an NPS (Net Promoter Score) framework, measuring customer loyalty and sentiment, increasing customer satisfaction by 25% and retention rates by 10% through targeted engagement strategies.</li>
-                </ul>
-            </div>
-            <div class="experience-item">
-                <h3>Qrioh Retail – Data Analyst Intern</h3>
-                <p><strong>India | Mar 2018 - Sep 2018</strong></p>
-                <ul>
-                    <li>Performed data analytics and predicted the potential cities favorable for expansion by creating a Plausibility Index using variables like population density, mobile penetration, literacy rate, internet availability, modernization variables.</li>
-                    <li>Built a demand forecasting model using Linear Regression on sales data to predict phone cover demand at the brand level, enabling better production prioritization.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="education" class="glass">
-            <h2>Education</h2>
-            <div class="education-item">
-                <h3>M.S in Business Analytics, Drexel University</h3>
-                <p><strong>Philadelphia, PA – GPA: 3.95 (Expected Mar 2025)</strong></p>
-                <p><em>Relevant Coursework:</em> Statistics, Machine Learning, Geospatial Analytics, Linear Programming, FinTech, Corporate Finance.</p>
-            </div>
-            <div class="education-item">
-                <h3>Bachelor of Commerce (Honours), University of Delhi</h3>
-                <p><strong>Delhi, India | Jul 2013 – Jun 2016</strong></p>
-            </div>
-        </section>
-
-        <section id="certifications" class="glass">
-            <h2>Certifications & Professional Development</h2>
-            <div class="cert-list">
-                <ul>
-                    <li>
-                        <strong>Data Analysis with Python</strong> – IBM (May 2023)
-                        <a href="https://www.credly.com/badges/3be00b96-2cfc-4e0f-823b-26d45fd25376/public_url" target="_blank" rel="noopener noreferrer" class="credential-btn">View Credential</a>
-                    </li>
-                    <li>
-                        <strong>Python for Data Science and AI</strong> – IBM (Apr 2023)
-                        <a href="https://www.credly.com/badges/2585e0a1-ff74-48a4-8dad-aa12776654fd/linked_in_profile" target="_blank" rel="noopener noreferrer" class="credential-btn">View Credential</a>
-                    </li>
-                    <li>
-                        <strong>SQL (Intermediate)</strong> – HackerRank (Mar 2023)
-                        <a href="https://www.hackerrank.com/certificates/7a9de1deefc2" target="_blank" rel="noopener noreferrer" class="credential-btn">View Credential</a>
-                    </li>
-                    <li>
-                        <strong>Master SQL For Data Science</strong> – Udemy (Feb 2023)
-                        <a href="https://www.udemy.com/certificate/UC-e926a2de-fe39-466f-896f-0aecdd8bc144/" target="_blank" rel="noopener noreferrer" class="credential-btn">View Credential</a>
-                    </li>
-                    <li>
-                        <strong>Neural Networks and Deep Learning</strong> – Coursera (Nov 2020)
-                        <a href="https://www.coursera.org/account/accomplishments/certificate/6AGBRFZF8J4D" target="_blank" rel="noopener noreferrer" class="credential-btn">View Credential</a>
-                    </li>
-                    <li>
-                        <strong>Machine Learning, Data Science and Deep Learning with Python</strong> – Udemy (Jun 2019)
-                        <a href="https://www.udemy.com/certificate/UC-V7Z03A83/" target="_blank" rel="noopener noreferrer" class="credential-btn">View Credential</a>
-                    </li>
-                    <li>
-                        <strong>Python for Data Science and Machine Learning Bootcamp</strong> – Udemy (May 2019)
-                        <a href="https://www.udemy.com/certificate/UC-PX3ER1ZA/" target="_blank" rel="noopener noreferrer" class="credential-btn">View Credential</a>
-                    </li>
-                    <li>
-                        <strong>Machine Learning</strong> – Stanford University (Mar 2019)
-                        <a href="https://www.coursera.org/account/accomplishments/verify/FXQPU587J2VF" target="_blank" rel="noopener noreferrer" class="credential-btn">View Credential</a>
-                    </li>
+                    <li>Conducted data analysis for 50+ market research initiatives, boosting brand positioning by 15%.</li>
+                    <li>Implemented an NPS framework that increased customer satisfaction by 25% and retention by 10%.</li>
                 </ul>
             </div>
         </section>
 
-        <section id="skills" class="glass">
-            <h2>Skills</h2>
-            <ul>
-                <li><strong>Languages & Scripting:</strong> Python, R, SQL (Postgre SQL, SQLite, MySQL, Athena).</li>
-                <li><strong>Database & Data Management:</strong> SQL Databases, ETL Pipelines, dbt (familiar), Data Cleaning & Transformation.</li>
-                <li><strong>Visualization & Reporting:</strong> Power BI, Tableau, Advanced Excel (VBA, macros, pivot tables), R Markdown.</li>
-                <li><strong>Cloud & Tools:</strong> AWS (Sagemaker, Athena, S3), BigQuery (familiar), Snowflake (familiar).</li>
-                <li><strong>Techniques:</strong> KPI Tracking, Demand Forecasting, A/B Testing, Trend Analysis, Hypothesis Testing.</li>
-            </ul>
-        </section>
-
-        <section id="projects" class="glass">
-            <h2>Projects</h2>
-            <div class="project-item">
-                <h3>Heart Disease Risk Prediction | Python, LightGBM, XGBoost</h3>
-                <p><strong>Objective:</strong> To build a high-performance machine learning model for early-stage heart disease prediction, focusing on improving classification accuracy and model interpretability for clinical use.</p>
-                <h4>My Approach:</h4>
-                <ul>
-                    <li>Engineered new clinical features from a 70,000-row Electronic Medical Record (EMR) dataset to improve the model's predictive power.</li>
-                    <li>Created a robust predictive model using advanced algorithms like LightGBM and XGBoost to classify patient risk.</li>
-                    <li>Designed and implemented scalable data pipelines to handle the EMR dataset, enabling real-time healthcare trend analysis.</li>
-                </ul>
-                <h4>Key Outcomes:</h4>
-                <ul>
-                    <li>Improved heart disease risk classification by 12% compared to baseline models.</li>
-                    <li>Enhanced model interpretability by 15%, providing clearer insights for clinical decision-making.</li>
-                    <li>Reduced data processing time by 30%, increasing the efficiency of the analytical workflow.</li>
+        <section id="projects" data-aos="fade-up">
+            <h2>🧩 Projects</h2>
+            <div class="project-card">
+                <h3>Heart Disease Risk Prediction</h3>
+                <p>Built a high-performance machine learning model using LightGBM and XGBoost for early-stage heart disease prediction from a 70,000-row EMR dataset.</p>
+                <ul class="project-details">
+                    <li>🛠️ <strong>Tech Stack:</strong> Python, LightGBM, XGBoost, Scikit-learn</li>
+                    <li>📈 <strong>Outcome:</strong> Improved risk classification by 12% and enhanced model interpretability by 15%.</li>
                 </ul>
             </div>
-            <hr>
-            <div class="project-item">
-                <h3>Ship Valuation Case Study | Multiple Regression, Statistical Analysis</h3>
-                <p><strong>Objective:</strong> To develop a precise and statistically sound predictive pricing model for a Capesize vessel (the Bet Performer) for Compass Maritime Services, providing a valuation backed by a high degree of confidence.</p>
-                <h4>My Approach:</h4>
-                <ul>
-                    <li>Conducted statistical correlation analysis to identify key price predictors, including the Capesize Index, the vessel's age at sale, and its Deadweight Tonnage (DWT).</li>
-                    <li>Incorporated macroeconomic factors, Gross Weight Tonnage (GWT), and fuel prices to enhance the model's precision.</li>
-                    <li>Generated 200 synthetic data points using Gretel.ai to rigorously validate the model's performance.</li>
-                </ul>
-                <h4>Key Outcomes:</h4>
-                <ul>
-                    <li>Developed a multiple regression model that achieved an R² score of 92%, indicating very high pricing accuracy.</li>
-                    <li>Delivered a final estimated valuation of $125.7M, supported by a 95% confidence interval of ($116M - $135.4M).</li>
+            <div class="project-card">
+                <h3>Ship Valuation Case Study</h3>
+                <p>Developed a precise predictive pricing model for a Capesize vessel using multiple regression analysis, incorporating market and macroeconomic data.</p>
+                <ul class="project-details">
+                    <li>🛠️ <strong>Tech Stack:</strong> Regression Analysis, Statistical Modeling, Gretel.ai</li>
+                    <li>📈 <strong>Outcome:</strong> Achieved 92% pricing accuracy (R² score) with a final estimated valuation of $125.7M.</li>
                 </ul>
             </div>
-            <hr>
-            <div class="project-item">
-                <h3>Wildfire Risk Analysis | Python, ArcGIS, K-Means Clustering</h3>
-                <p><strong>Objective:</strong> To create a more accurate, data-driven framework for assessing wildfire risk to properties, leading to more precise underwriting and premium adjustments.</p>
-                <h4>My Approach:</h4>
-                <ul>
-                    <li>Integrated official ArcGIS wildfire perimeter data with a property dataset using the Ball Tree Algorithm.</li>
-                    <li>Implemented a K-Means clustering model in Python to classify 16,256 properties into distinct risk-based segments.</li>
-                </ul>
-                <h4>Key Outcomes:</h4>
-                <ul>
-                    <li>Enhanced underwriting precision by 30% by allowing for optimized premium adjustments.</li>
-                    <li>Improved the accuracy of insurance pricing and overall risk assessments.</li>
+            <div class="project-card">
+                <h3>Wildfire Risk Analysis</h3>
+                 <p>Created a data-driven framework to assess wildfire risk by blending geospatial data with machine learning, leading to more precise insurance underwriting.</p>
+                 <ul class="project-details">
+                    <li>🛠️ <strong>Tech Stack:</strong> Python, ArcGIS, K-Means Clustering, Ball Tree Algorithm</li>
+                    <li>📈 <strong>Outcome:</strong> Enhanced underwriting precision by 30% by classifying 16,000+ properties into risk segments.</li>
                 </ul>
             </div>
-            <hr>
-            <div class="project-item">
-                <h3>Credit Risk Scoring and Loan Prediction | R, SQL, Lasso/Ridge Regression</h3>
-                <p><strong>Objective:</strong> To build a robust predictive model to accurately forecast loan amounts and enhance the identification of high-risk borrowers from a large financial dataset.</p>
-                <h4>My Approach:</h4>
-                <ul>
-                    <li>Analyzed over 396,000 Lending Club records, focusing on interest rate and borrower grade as key predictors.</li>
-                    <li>Built and trained both Lasso and Ridge Regression models to predict potential loan amounts.</li>
-                    <li>Utilized VIF and residual diagnostics to identify borrower anomalies and potential fraud indicators.</li>
-                </ul>
-                <h4>Key Outcomes:</h4>
-                <ul>
-                    <li>Achieved 87% accuracy in forecasting loan amounts.</li>
-                    <li>Strengthened the credit risk and fraud detection framework by identifying outlier borrowers.</li>
-                </ul>
-            </div>
-            <hr>
-            <div class="project-item">
-                <h3>Sentiment Dashboard: Student-Employer Text Analysis | Python, VADER, Power BI</h3>
-                <p><strong>Objective:</strong> To analyze four years of unstructured text data from Drexel University's student and employer communications to extract actionable insights, measure sentiment, and identify key trends to improve engagement.</p>
-                <h4>My Approach:</h4>
-                <ul>
-                    <li>Processed and analyzed textual data from over 30 files spanning four years using Python.</li>
-                    <li>Executed sentiment analysis on student and employer feedback using the VADER library.</li>
-                </ul>
-                <h4>Key Outcomes:</h4>
-                <ul>
-                    <li>Designed and delivered a comprehensive Power BI dashboard that visually represented sentiment trends, key topics, and performance KPIs, enabling data-driven improvements in student-employer relations.</li>
-                </ul>
-            </div>
-            <hr>
-            <div class="project-item">
-                <h3>Customer Churn Prediction | XGBoost, Strategic Analysis</h3>
-                <p><strong>Objective:</strong> To accurately predict customer churn at Drexel University and develop data-driven strategies to improve customer retention and loyalty.</p>
-                <h4>My Approach:</h4>
-                <ul>
-                    <li>Managed a churn reduction project, utilizing an advanced XGBoost model to identify customers at high risk of churning.</li>
-                    <li>Analyzed the model's outputs to recommend specific CRM enhancements and customized engagement strategies.</li>
-                </ul>
-                <h4>Key Outcomes:</h4>
-                <ul>
-                    <li>Achieved 75.6% accuracy in predicting customer churn, providing a reliable basis for proactive intervention.</li>
-                    <li>The analytical findings directly influenced the university's strategic retention plans.</li>
+            <div class="project-card">
+                <h3>Credit Risk Scoring and Loan Prediction</h3>
+                <p>Built a robust predictive model on 396K+ Lending Club records to accurately forecast loan amounts and identify high-risk borrowers.</p>
+                <ul class="project-details">
+                    <li>🛠️ <strong>Tech Stack:</strong> R, SQL, Lasso/Ridge Regression</li>
+                    <li>📈 <strong>Outcome:</strong> Achieved 87% accuracy in forecasting loan amounts, strengthening fraud detection.</li>
                 </ul>
             </div>
         </section>
 
-        <section id="contact" class="glass">
-            <h2>Contact</h2>
-            <form class="contact-form" action="https://formspree.io/f/your-formspree-id" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-            <div class="contact-info">
-                <p>I'm currently seeking new opportunities and my inbox is always open. Whether you have a question or just want to connect, I'll get back to you!</p>
-                <p>Email: <a href="mailto:rakshitmadan.work@gmail.com">rakshitmadan.work@gmail.com</a></p>
-                <p>LinkedIn: <a href="https://linkedin.com/in/rakshit-madan/">linkedin.com/in/rakshit-madan/</a></p>
+        <section id="education" class="education-section" data-aos="fade-up">
+            <h2>🎓 Education</h2>
+            <div class="edu-card">
+                <div class="edu-header">
+                    <div class="edu-text">
+                        <h3>M.S. in Business Analytics</h3>
+                        <span>Drexel University, Philadelphia, PA</span>
+                        <span class="edu-duration">Sep 2023 – Mar 2025 | GPA: 3.95</span>
+                    </div>
+                    <img src="images/drexel-logo.png" alt="Drexel University" class="edu-logo" />
+                </div>
+            </div>
+            <div class="edu-card">
+                <div class="edu-header">
+                    <div class="edu-text">
+                        <h3>Bachelor of Commerce (Honours)</h3>
+                        <span>University of Delhi, India</span>
+                        <span class="edu-duration">Jul 2013 – Jun 2016</span>
+                    </div>
+                     <img src="images/delhi-logo.png" alt="University of Delhi" class="edu-logo" />
+                </div>
             </div>
         </section>
-    </main>
-    <footer class="glass">
-        &copy; 2025 Rakshit Madan. All Rights Reserved.
+
+        <section id="certifications" data-aos="fade-up">
+            <h2>🏆 Certifications</h2>
+            <div class="info-card">
+                <ul>
+                    <li><a href="https://www.credly.com/badges/3be00b96-2cfc-4e0f-823b-26d45fd25376/public_url" target="_blank"><strong>Data Analysis with Python</strong></a> – IBM (May 2023)</li>
+                    <li><a href="https://www.credly.com/badges/2585e0a1-ff74-48a4-8dad-aa12776654fd/linked_in_profile" target="_blank"><strong>Python for Data Science and AI</strong></a> – IBM (Apr 2023)</li>
+                    <li><a href="https://www.hackerrank.com/certificates/7a9de1deefc2" target="_blank"><strong>SQL (Intermediate)</strong></a> – HackerRank (Mar 2023)</li>
+                    <li><a href="https://www.udemy.com/certificate/UC-e926a2de-fe39-466f-896f-0aecdd8bc144/" target="_blank"><strong>Master SQL For Data Science</strong></a> – Udemy (Feb 2023)</li>
+                    <li><a href="https://www.coursera.org/account/accomplishments/certificate/6AGBRFZF8J4D" target="_blank"><strong>Neural Networks and Deep Learning</strong></a> – Coursera (Nov 2020)</li>
+                    <li><a href="https://www.coursera.org/account/accomplishments/verify/FXQPU587J2VF" target="_blank"><strong>Machine Learning</strong></a> – Stanford University (Mar 2019)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section" data-aos="fade-up">
+            <h2>📫 Contact</h2>
+            <div class="contact-card">
+                <ul>
+                    <li>📧 <strong>Email:</strong> <a href="mailto:rakshitmadan.work@gmail.com">rakshitmadan.work@gmail.com</a></li>
+                    <li>🔗 <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/rakshit-madan/" target="_blank">linkedin.com/in/rakshit-madan/</a></li>
+                    <li>💻 <strong>GitHub:</strong> <a href="https://github.com/rakshitmadan" target="_blank">github.com/rakshitmadan</a></li>
+                    <li>📄 <a href="Rakshit_Madan_Resume.pdf" download><strong>Download Resume (PDF)</strong></a></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <footer>
+        &copy; 2025 Rakshit Madan • Business Analytics Portfolio
     </footer>
-
-    <script src="assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
-        // Oscar mascot widget logic (optional)
-        const oscarMascot = document.getElementById('oscarMascot');
-        if (oscarMascot) {
-            oscarMascot.onclick = function() {
-                const counter = document.getElementById('petCounter');
-                // A simple counter that doesn't require a backend
-                let currentCount = parseInt(counter.dataset.count || '0');
-                currentCount++;
-                counter.dataset.count = currentCount;
-                counter.textContent = `Oscar has been petted ${currentCount} times!`;
-            };
+        AOS.init({ duration: 1000, once: true });
+        function toggleMode() {
+            document.body.classList.toggle("dark");
+            localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
         }
+        window.onload = () => {
+            if (localStorage.getItem("theme") === "dark") {
+                document.body.classList.add("dark");
+            }
+        };
     </script>
 </body>
 </html>
